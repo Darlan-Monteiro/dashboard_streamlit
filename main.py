@@ -13,7 +13,7 @@ def carregar_dados(empresas):
   return cotacoes_acao
 
 def carregar_tickets():
-  base_tickers = pd.read_csv("apps_e_sites_streamlit/ibov.csv", sep=";")
+  base_tickers = pd.read_csv("ibov.csv", sep=";")
   tickers = list(base_tickers['Código'])
   tickers = [item + '.SA' for item in tickers]
   return tickers
